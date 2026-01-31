@@ -1,10 +1,10 @@
 using System;
-using UnityEditor.Build;
 using UnityEngine;
+
 
 public class TapePlayerInput : MonoBehaviour
 {
-    [SerializeField]
+
     private Transform _forwardTransform;
 
     private InputSystem_Actions _input;
@@ -37,12 +37,28 @@ public class TapePlayerInput : MonoBehaviour
         _input.Player.Jump.canceled += JumpPressed;
         _input.Player.Rotate.performed += RotatePressed;
         _input.Player.Rotate.canceled += RotatePressed;
-
     }
+    private bool _isLocalPlayer;
 
-    void Update()
+    public void Init(Transform forward, bool isLocalPlayer)
     {
-        Debug.DrawLine(_forwardTransform.position, _forwardTransform.position + _forwardTransform.forward, Color.red);
+        _forwardTransform = forward;
+        _isLocalPlayer = isLocalPlayer;
+
+        if (isLocalPlayer)
+        {
+            _input = new();
+            _input.Enable();
+            _input.Player.Jump.performed += JumpPressed;
+            _input.Player.Jump.canceled += JumpPressed;
+        }
+        else
+        {
+            Destroy(GetComponent<TapeRaycaster>());
+            Destroy(GetComponent<TapePlacer>());
+            Destroy(GetComponent<AutoRespawn>());
+            Destroy(this);
+        }
     }
 
     private void JumpPressed(UnityEngine.InputSystem.InputAction.CallbackContext ctx)
@@ -65,7 +81,9 @@ public class TapePlayerInput : MonoBehaviour
 
     void FixedUpdate()
     {
-            
+        if (!_isLocalPlayer)
+            return;
+
         Vector3 angular = _rb.angularVelocity;
         angular.x = Mathf.Clamp(angular.x, -_maxAngular, _maxAngular);
         angular.y = Mathf.Clamp(angular.y, -_maxAngular, _maxAngular);

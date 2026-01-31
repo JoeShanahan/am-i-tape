@@ -10,17 +10,21 @@ public class PlayerDebugUI : MonoBehaviour
     private UprightDetector _upright;
     private Rigidbody _rb;
 
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void Init(GameObject playerObj)
     {
-        _upright = FindFirstObjectByType<UprightDetector>();
-        _rb = _upright.GetComponent<Rigidbody>();
-        _raycaster = _upright.GetComponent<TapeRaycaster>();
+        _upright = playerObj.GetComponent<UprightDetector>();
+        _rb = playerObj.GetComponent<Rigidbody>();
+        _raycaster = playerObj.GetComponent<TapeRaycaster>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (_rb == null)
+            return;
+
         int upright = Mathf.RoundToInt(_upright.UprightPercent() * 100);
         Vector3 angVel = _rb.angularVelocity;
         float x = Mathf.RoundToInt(angVel.x);
