@@ -13,6 +13,9 @@ public class TapePlayerInput : MonoBehaviour
     [SerializeField]
     private float _rollStrength = 10f;
 
+    [SerializeField]
+    private float _tiltStrength = 2f;
+
     void Start()
     {
         _input = new();
@@ -24,20 +27,29 @@ public class TapePlayerInput : MonoBehaviour
         Debug.DrawLine(_forwardTransform.position, _forwardTransform.position + _forwardTransform.forward, Color.red);
     }
 
-    void FixedUpdate()
-    {
-        // Axis of rotation for rolling
-        Vector3 rollAxis = Vector3.Cross(-_forwardTransform.forward, Vector3.up);
+void FixedUpdate()
+{
+    var move = _input.Player.Move.ReadValue<Vector2>();
 
-        // If the direction is vertical or invalid, skip
-        if (rollAxis.sqrMagnitude < 0.0001f)
-            return;
+    // Forward roll axis
+    Vector3 forwardAxis = Vector3.Cross(-_forwardTransform.forward, Vector3.up);
 
-        var move = _input.Player.Move.ReadValue<Vector2>();
+    // Side roll axis (left/right)
+    Vector3 sideAxis = Vector3.Cross(_forwardTransform.right, Vector3.up);
 
-        // Torque proportional to desired rolling speed
-        Vector3 torque = rollAxis.normalized * _rollStrength * move.y;
+    // Skip if invalid
+    if (forwardAxis.sqrMagnitude < 0.0001f && sideAxis.sqrMagnitude < 0.0001f)
+        return;
 
-        _rb.AddTorque(torque, ForceMode.Acceleration);
-    }
+    // Normalize axes
+    forwardAxis.Normalize();
+    sideAxis.Normalize();
+
+    // Combine torques
+    Vector3 torque =
+        forwardAxis * (_rollStrength * move.y) +
+        sideAxis   * (_tiltStrength * -move.x);
+
+    _rb.AddTorque(torque, ForceMode.Acceleration);
+}
 }

@@ -510,6 +510,7 @@ MonoBehaviour:
   _forwardTransform: {fileID: 1039954045}
   _rb: {fileID: 829146865}
   _rollStrength: 25
+  _tiltStrength: 10
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
