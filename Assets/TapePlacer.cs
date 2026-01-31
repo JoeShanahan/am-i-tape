@@ -55,6 +55,13 @@ public class TapePlacer : MonoBehaviour
         _tempObj.AddComponent<MeshFilter>().sharedMesh = _tempMesh;
         _tempObj.AddComponent<MeshRenderer>().sharedMaterial = _tapeMat;
     }
+            private void OnDestroy()
+    {
+        if (_input != null)
+        {
+            _input.Disable();
+        }
+    }
 
     private void StartTaping()
     {

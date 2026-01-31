@@ -186,12 +186,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e36fc6ac4d7212640b8548dd6484ecb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TapePlayerInput
-  _forwardTransform: {fileID: 0}
   _rb: {fileID: 8957857844235311133}
   _rollStrength: 20
   _tiltStrength: 6
   _maxAngular: 10
-  _jumpForce: 10
+  _jumpForce: 20
 --- !u!114 &3900899098036006617
 MonoBehaviour:
   m_ObjectHideFlags: 0
