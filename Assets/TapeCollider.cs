@@ -18,6 +18,9 @@ public class TapeCollider : MonoBehaviour
     [SerializeField]
     private PhysicsMaterial _mat;
 
+    public float Radius => _radius;
+    public float Width => _capsuleLength;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

@@ -3,7 +3,17 @@ guid: 2fd1763f1f490490983c628011a807f3
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Counter
+    second: {fileID: 2100000, guid: 8889936667fb44ae3ae63234dbf929ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Worktop
+    second: {fileID: 2100000, guid: 7b6179d4abab54ff691e6e921aa8d255, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

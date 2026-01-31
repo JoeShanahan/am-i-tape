@@ -3,7 +3,32 @@ guid: ad6a58df82e554afaa89f327ce776e4e
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Counter
+    second: {fileID: 2100000, guid: 8889936667fb44ae3ae63234dbf929ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Door
+    second: {fileID: 2100000, guid: 03f75ca985c83483ea6efa8c6563ecc0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Handle
+    second: {fileID: 2100000, guid: c81a6a4208c6d420e8bebc8cbee2d4a0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Chrome
+    second: {fileID: 2100000, guid: c81a6a4208c6d420e8bebc8cbee2d4a0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Worktop
+    second: {fileID: 2100000, guid: 7b6179d4abab54ff691e6e921aa8d255, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
