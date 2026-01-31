@@ -25,6 +25,9 @@ public class TapePlayerInput : MonoBehaviour
     private float _jumpForce;
 
     private bool _jumpRequested;
+    private bool _rotateRequested;
+    private float _rotateYModifier = 2f;
+    private float _rotateXModifier = 0.8f;
 
     void Start()
     {
@@ -32,6 +35,9 @@ public class TapePlayerInput : MonoBehaviour
         _input.Enable();
         _input.Player.Jump.performed += JumpPressed;
         _input.Player.Jump.canceled += JumpPressed;
+        _input.Player.Rotate.performed += RotatePressed;
+        _input.Player.Rotate.canceled += RotatePressed;
+
     }
 
     void Update()
@@ -47,6 +53,14 @@ public class TapePlayerInput : MonoBehaviour
         if (ctx.canceled)
             _jumpRequested = false;
 
+    }
+
+    private void RotatePressed(UnityEngine.InputSystem.InputAction.CallbackContext ctx)
+    {
+        if (ctx.performed)
+            _rotateRequested = true;
+        if (ctx.canceled)
+            _rotateRequested = false;
     }
 
     void FixedUpdate()
@@ -71,6 +85,16 @@ public class TapePlayerInput : MonoBehaviour
         {
             _jumpRequested = false;
             _rb.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
+        }
+
+        if (_rotateRequested)
+        {
+            float rotateInput = _input.Player.Rotate.ReadValue<float>();
+            float rotateAmountY = rotateInput * _rotateYModifier;
+            float newRotationY = _rb.rotation.eulerAngles.y + rotateAmountY;
+            float rotateAmountX = rotateInput * _rotateXModifier;
+            float newRotationX = _rb.rotation.eulerAngles.x + rotateAmountX;
+            _rb.rotation = Quaternion.Euler(newRotationX, newRotationY, _rb.rotation.eulerAngles.z);
         }
 
         // Skip if invalid
