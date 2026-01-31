@@ -37,6 +37,9 @@ public class TapePlayerInput : MonoBehaviour
         _input.Player.Jump.canceled += JumpPressed;
         _input.Player.Rotate.performed += RotatePressed;
         _input.Player.Rotate.canceled += RotatePressed;
+
+        Vector3 respawnPoint = GameObject.FindGameObjectsWithTag("Respawn")[0].transform.position;
+        _rb.position = respawnPoint;
     }
     private bool _isLocalPlayer;
 
