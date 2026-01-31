@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70da24d82e8254bdc96273588685a423, type: 3}
   m_Name: Blue Tape
   m_EditorClassIdentifier: Assembly-CSharp::TapeData
-  TapeName: Tough Tape
-  PreviewSprite: {fileID: 21300000, guid: ab697f0ebb17a475c94f4e3905669cc1, type: 3}
-  Description: "Built like a tank and twice as stubborn. If you stick something with
-    Tough Tape, it\u2019s staying there until the end of time. Maybe longer."
+  TapeName: Painting Tape
+  PreviewSprite: {fileID: 21300000, guid: cf9bbc9cc12ea9a42bad93cd95d6d246, type: 3}
+  Description: I have a blue house with a blue window, Blue is the color of all that
+    I wear
   Prefab: {fileID: 4499961483379681810, guid: eb76858156ed4b942ac175bee8ca3a0e, type: 3}
   Texture: {fileID: 0}
   IsLocked: 0

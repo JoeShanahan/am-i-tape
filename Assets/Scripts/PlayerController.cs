@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
         _spawnedTape = Instantiate(_selectedTape.Prefab);
         _spawnedTape.GetComponent<TapePlayerInput>().Init(_cameraFollow.transform, isLocalPlayer);
         _cameraFollow.Init(_spawnedTape.transform);
-        FindFirstObjectByType<PlayerDebugUI>().Init(_spawnedTape);
+        FindFirstObjectByType<PlayerDebugUI>()?.Init(_spawnedTape);
     }
 
     // Update is called once per frame

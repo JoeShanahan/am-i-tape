@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70da24d82e8254bdc96273588685a423, type: 3}
   m_Name: Black Tape
   m_EditorClassIdentifier: Assembly-CSharp::TapeData
-  TapeName: Tough Tape
-  PreviewSprite: {fileID: 21300000, guid: ab697f0ebb17a475c94f4e3905669cc1, type: 3}
+  TapeName: Gaffer Tape
+  PreviewSprite: {fileID: 21300000, guid: c387aa65e572a7848a4c637c8810d1af, type: 3}
   Description: "Built like a tank and twice as stubborn. If you stick something with
     Tough Tape, it\u2019s staying there until the end of time. Maybe longer."
   Prefab: {fileID: 3042152603781404721, guid: d3fb38e4b772cdf46b657ca6484b6b16, type: 3}
