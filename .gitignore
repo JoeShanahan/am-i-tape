@@ -100,3 +100,5 @@ InitTestScene*.unity*
 /.vscode
 am-i-tape.slnx
 .DS_Store
+/.idea
+ProjectSettings/Packages/com.unity.probuilder/Settings.json
