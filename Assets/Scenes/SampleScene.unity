@@ -449,8 +449,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   _numColliders: 24
   _radius: 0.9
-  _capsuleRadius: 0.08
-  _capsuleLength: 0.5
+  _capsuleRadius: 0.15
+  _capsuleLength: 1
 --- !u!54 &829146865
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -636,7 +636,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.00000017881393, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 92.045, y: 92.045, z: 92.045}
+  m_LocalScale: {x: 92.045, y: 92.045, z: 243.9287}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 829146866}
@@ -757,7 +757,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.00000017881393, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 92.045, y: 92.045, z: 92.045}
+  m_LocalScale: {x: 92.045, y: 92.045, z: 243.9287}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 829146866}
