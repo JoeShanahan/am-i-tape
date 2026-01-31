@@ -15,6 +15,9 @@ public class TapeCollider : MonoBehaviour
     [SerializeField]
     private float _capsuleLength = 0.5f;
 
+    [SerializeField]
+    private PhysicsMaterial _mat;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -32,6 +35,7 @@ public class TapeCollider : MonoBehaviour
             capsule.center = origin;
             capsule.direction = 2;
             capsule.height = _capsuleLength;
+            capsule.material = _mat;
         }
     }
 
