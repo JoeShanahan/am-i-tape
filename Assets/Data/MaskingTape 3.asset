@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70da24d82e8254bdc96273588685a423, type: 3}
+  m_Name: MaskingTape 3
+  m_EditorClassIdentifier: Assembly-CSharp::TapeData
+  TapeName: Do Not Enter Tape
+  PreviewSprite: {fileID: 21300000, guid: b3b0e4dc1dcf94848b0f3d5fd63a7e5d, type: 3}
+  Description: "Bright, bold, and screaming \u2018DO NOT CROSS\u2019. Perfect for
+    marking hazards, dramatic entrances, or pretending your room is a top\u2011secret
+    government facility."
+  Prefab: {fileID: 0}
+  Texture: {fileID: 0}
+  IsLocked: 0
