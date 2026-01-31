@@ -207,7 +207,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: -6}
+  m_LocalPosition: {x: 0, y: 0.5, z: -12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -428,7 +428,8 @@ GameObject:
   - component: {fileID: 829146865}
   - component: {fileID: 829146864}
   - component: {fileID: 829146867}
-  m_Layer: 0
+  - component: {fileID: 829146868}
+  m_Layer: 6
   m_Name: Tape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -505,14 +506,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 829146863}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d8fc72e8042a2e4c8ad4970113f396c, type: 3}
+  m_Script: {fileID: 11500000, guid: e36fc6ac4d7212640b8548dd6484ecb1, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TapePlayerCarControls
+  m_EditorClassIdentifier: Assembly-CSharp::TapePlayerInput
   _forwardTransform: {fileID: 1039954045}
   _rb: {fileID: 829146865}
-  _rollStrength: 5
-  _tiltStrength: 5
-  _accelerateStrength: 30
+  _rollStrength: 20
+  _tiltStrength: 6
+  _maxAngular: 10
+  _jumpForce: 10
+--- !u!114 &829146868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829146863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e4ae4c072b3eba4cb850a89f1effdaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  _zKill: -10
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,7 +637,7 @@ GameObject:
   - component: {fileID: 1272464060}
   - component: {fileID: 1272464062}
   - component: {fileID: 1272464061}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TapeInner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -743,7 +758,7 @@ GameObject:
   - component: {fileID: 1416632480}
   - component: {fileID: 1416632482}
   - component: {fileID: 1416632481}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TapeOuter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1071,7 +1086,7 @@ Transform:
   m_GameObject: {fileID: 1952367119}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: -6}
+  m_LocalPosition: {x: 0, y: 0.5, z: -12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1106,9 +1121,9 @@ MonoBehaviour:
   ShoulderOffset: {x: -0.15, y: 0.5, z: 0}
   VerticalArmLength: 0
   CameraSide: 0.5
-  CameraDistance: 6
+  CameraDistance: 12
   AvoidObstacles:
-    Enabled: 0
+    Enabled: 1
     CollisionFilter:
       serializedVersion: 2
       m_Bits: 1
