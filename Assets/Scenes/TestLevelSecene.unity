@@ -327,7 +327,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e36fc6ac4d7212640b8548dd6484ecb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TapePlayerInput
-  _forwardTransform: {fileID: 1775219828}
   _rb: {fileID: 67356843}
   _rollStrength: 20
   _tiltStrength: 6
@@ -1995,6 +1994,75 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2534964839176971238, guid: 5779070d1b8f84666b05634c94fb015d, type: 3}
+--- !u!1001 &617538648
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 199650424f75547ebade997691e7ae1b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 199650424f75547ebade997691e7ae1b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 199650424f75547ebade997691e7ae1b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 199650424f75547ebade997691e7ae1b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -55.105377
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 199650424f75547ebade997691e7ae1b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 39.943607
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 199650424f75547ebade997691e7ae1b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 19.243683
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 199650424f75547ebade997691e7ae1b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 199650424f75547ebade997691e7ae1b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 199650424f75547ebade997691e7ae1b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 199650424f75547ebade997691e7ae1b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 199650424f75547ebade997691e7ae1b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 199650424f75547ebade997691e7ae1b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 199650424f75547ebade997691e7ae1b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 199650424f75547ebade997691e7ae1b, type: 3}
+      propertyPath: m_Name
+      value: Ceiling Fan
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 199650424f75547ebade997691e7ae1b, type: 3}
 --- !u!1001 &816806973
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4390,3 +4458,4 @@ SceneRoots:
   - {fileID: 1329776545}
   - {fileID: 599568480}
   - {fileID: 423688273}
+  - {fileID: 617538648}
