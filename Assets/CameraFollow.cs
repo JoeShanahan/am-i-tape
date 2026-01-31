@@ -16,6 +16,11 @@ public class CameraFollow : MonoBehaviour
 
     private InputSystem_Actions _input;
 
+    public void Init(Transform toFollow)
+    {
+        _toFollow = toFollow;
+    }
+
     void Start()
     {
         _input = new();
