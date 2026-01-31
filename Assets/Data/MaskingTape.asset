@@ -12,4 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70da24d82e8254bdc96273588685a423, type: 3}
   m_Name: MaskingTape
   m_EditorClassIdentifier: Assembly-CSharp::TapeData
-  TapeName: HelloWorld
+  TapeName: Packing Tape
+  PreviewSprite: {fileID: 21300000, guid: 1a681456d74c243729d043ec02af4fe0, type: 3}
+  Description: The loudest tape in existence. Great for sealing boxes, annoying your
+    neighbours, and creating packages that absolutely will not open unless someone
+    uses a chainsaw.
+  Prefab: {fileID: 0}
+  Texture: {fileID: 0}
+  IsLocked: 0

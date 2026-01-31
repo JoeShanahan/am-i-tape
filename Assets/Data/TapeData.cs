@@ -4,4 +4,10 @@ using UnityEngine;
 public class TapeData : ScriptableObject
 {
     public string TapeName;
+    public Sprite PreviewSprite;
+    public string Description;
+    public GameObject Prefab;
+    public Texture2D Texture;
+    public bool IsLocked;
+
 }
