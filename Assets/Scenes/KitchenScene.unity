@@ -93,7 +93,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 20201, guid: 0000000000000000f000000000000000, type: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 17108f821571f4f40bf2a7fb2e8b4fdc, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 49a13526f4edd4c7ca7077fc246d03fc, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -4039,7 +4039,7 @@ Light:
   m_GameObject: {fileID: 564110201}
   m_Enabled: 1
   serializedVersion: 12
-  m_Type: 1
+  m_Type: 3
   m_Color: {r: 0.9811321, g: 0.90622604, b: 0.71733713, a: 1}
   m_Intensity: 130.6
   m_Range: 40
@@ -4080,13 +4080,13 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 4e-45, y: 2.51e-43, z: 0, w: -5.673505e+9}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -8970,7 +8970,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 432c698c084644a20bf2052919203d86, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9976,7 +9976,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 1.4881196e+37, y: 3.097271e+27, z: 7.1819367e+22, w: 1.303677e+10}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
