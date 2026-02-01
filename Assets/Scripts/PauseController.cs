@@ -39,4 +39,14 @@ public class PauseController : MonoBehaviour
 
         Time.timeScale = _isPaused ? 0f : 1f;
     }
+    
+    public void ButtonPressQuit()
+    {
+        Application.Quit();
+    }
+    
+    public void ButtonPressMenu()
+    {
+        PersistentUI.DoTransition("TitleScene");
+    }
 }
