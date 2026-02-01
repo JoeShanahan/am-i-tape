@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70da24d82e8254bdc96273588685a423, type: 3}
   m_Name: MaskingTape 2
   m_EditorClassIdentifier: Assembly-CSharp::TapeData
-  TapeName: Gaffer Tape
+  TapeName: Electrical Tape
   PreviewSprite: {fileID: 21300000, guid: 17172cce9638b452b8043d07906991b5, type: 3}
-  Description: "Hollywood\u2019s favourite problem\u2011solver. Sticks to everything,
-    leaves no mess, and somehow makes you feel like a professional even when you\u2019re
-    just taping two things that definitely shouldn\u2019t be taped together."
-  Prefab: {fileID: 0}
+  Description: Tape to cover up electricity
+  Prefab: {fileID: 919132149155446097, guid: 7e7501e4fa72f405bbac7c897a349f86, type: 3}
+  PrefabMultiplayer: {fileID: 919132149155446097, guid: 7e7501e4fa72f405bbac7c897a349f86, type: 3}
   Texture: {fileID: 0}
   IsLocked: 0
