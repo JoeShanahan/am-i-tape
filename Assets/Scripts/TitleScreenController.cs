@@ -13,8 +13,11 @@ public class TitleScreenController : MonoBehaviour
     private CanvasGroup _singlePlayerScreen;
 
     [SerializeField]
-    private CanvasGroup _mutliplayerScreen;
+    private CanvasGroup _multiplayerScreen;
 
+    [SerializeField]
+    private CanvasGroup _settingsScreen;
+    
     [SerializeField]
     private PlayerSettings _settings;
     
@@ -26,26 +29,35 @@ public class TitleScreenController : MonoBehaviour
     {
         _rootScreen.gameObject.SetActive(false);
         _singlePlayerScreen.gameObject.SetActive(true);
+        _multiplayerScreen.gameObject.SetActive(false);
+        _settingsScreen.gameObject.SetActive(false);
 
-        SelectButton(_lastSelectedButton ?? _singleDefaultButton);
-
-        _settings.SelectedMode = PlayerSettings.GameMode.Single;
     }
-    public void ButtonPressMutli()
+    public void ButtonPressMulti()
     {
         _rootScreen.gameObject.SetActive(false);
-        _mutliplayerScreen.gameObject.SetActive(true);
+        _multiplayerScreen.gameObject.SetActive(true);
+        _singlePlayerScreen.gameObject.SetActive(false);
+        _settingsScreen.gameObject.SetActive(false);
 
-        SelectButton(_lastSelectedButton ?? _multiDefaultButton);
     }
+    
+    public void ButtonPressSettings()
+    {
+        _rootScreen.gameObject.SetActive(false);
+        _settingsScreen.gameObject.SetActive(true);
+        _singlePlayerScreen.gameObject.SetActive(false);
+        _multiplayerScreen.gameObject.SetActive(false);
 
+    }
+    
     public void ButtonPressBack()
     {
         _rootScreen.gameObject.SetActive(true);
         _singlePlayerScreen.gameObject.SetActive(false);
-        _mutliplayerScreen.gameObject.SetActive(false);
+        _multiplayerScreen.gameObject.SetActive(false);
+        _settingsScreen.gameObject.SetActive(false);
 
-        SelectButton(_lastSelectedButton ?? _rootDefaultButton);
     }
     
     public void ButtonPressPlaySingle()
@@ -79,8 +91,6 @@ public class TitleScreenController : MonoBehaviour
     private void SelectButton(GameObject button)
     {
         _lastSelectedButton = button;
-        // EventSystem.current.SetSelectedGameObject(null);
-        // EventSystem.current.SetSelectedGameObject(button);
     }
 
     void Update()

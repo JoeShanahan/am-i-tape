@@ -2,6 +2,7 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName = "PlayerSettings", menuName = "Scriptable Objects/PlayerSettings")]
 public class PlayerSettings : ScriptableObject
+
 {
     public enum GameMode
     {
@@ -20,4 +21,5 @@ public class PlayerSettings : ScriptableObject
     public bool InvertY;
 
     public TapeData[] AllTapes;
+    
 }
