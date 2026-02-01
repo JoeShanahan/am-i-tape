@@ -21,7 +21,12 @@ public class NetworkTapeBehaviour : NetworkBehaviour
             Instantiate(_extras);
             var camFollow = FindFirstObjectByType<CameraFollow>();
             camFollow.Init(transform);
-            GetComponent<TapePlayerInput>().Init(camFollow.transform, true);       
+            GetComponent<TapePlayerInput>().Init(camFollow.transform, true);
+                GameObject respawnPos = GameObject.FindWithTag("Respawn");
+            Rigidbody _rb = GetComponent<Rigidbody>();
+
+        if (_rb != null && respawnPos != null)
+            _rb.position = respawnPos.transform.position;
         }
         else
         {

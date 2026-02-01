@@ -18,5 +18,5 @@ MonoBehaviour:
     Tough Tape, it\u2019s staying there until the end of time. Maybe longer."
   Prefab: {fileID: 3042152603781404721, guid: d3fb38e4b772cdf46b657ca6484b6b16, type: 3}
   PrefabMultiplayer: {fileID: 5247723399419488418, guid: 2a506e54110674247a5902db584f04e1, type: 3}
-  Texture: {fileID: 0}
+  material: {fileID: 2100000, guid: bca2a8820a8e7a3438e5d64deded1383, type: 2}
   IsLocked: 0
