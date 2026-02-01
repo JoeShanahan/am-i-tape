@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 5284284693082089020}
   m_Layer: 6
   m_Name: BlueTape
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -191,7 +191,6 @@ MonoBehaviour:
   _tiltStrength: 6
   _maxAngular: 10
   _jumpForce: 20
-  _settings: {fileID: 11400000, guid: a06b81ec31abc944c85553bde6e4cdfb, type: 2}
 --- !u!114 &3900899098036006617
 MonoBehaviour:
   m_ObjectHideFlags: 0
