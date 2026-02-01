@@ -55,7 +55,6 @@ public class TapeItemUI : MonoBehaviour
 
     public void onSelected()
     {
-        // set description text.text as Description
     }
 }
    

@@ -47,7 +47,7 @@ public class PauseController : MonoBehaviour
     }
     
     public void ButtonPressMenu()
-    {
+    {;
         PersistentUI.DoTransition("TitleScene");
 
     }
