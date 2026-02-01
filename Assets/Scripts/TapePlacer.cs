@@ -1,11 +1,11 @@
+using System;
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.ProBuilder.MeshOperations;
 
 public class TapePlacer : MonoBehaviour
 {
+    public event Action<Vector3, Vector3, Vector3, Vector3> OnQuadPlaced;
     private TapeRaycaster _raycaster;
     private InputSystem_Actions _input;
     private bool _isTapeHeld;
@@ -76,6 +76,7 @@ public class TapePlacer : MonoBehaviour
         Vector3 finalLeft = _raycaster.RaycastLeft();
         Vector3 finalRight = _raycaster.RaycastRight();
         GenerateGeometry(_lastLeftPoint, _lastRightPoint, finalLeft, finalRight);
+        OnQuadPlaced?.Invoke(_lastLeftPoint, _lastRightPoint, finalLeft, finalRight);
     }
 
     private int _tapeCount;
@@ -127,6 +128,7 @@ public class TapePlacer : MonoBehaviour
             return;
 
         GenerateGeometry(_lastLeftPoint, _lastRightPoint, left, right);
+        OnQuadPlaced?.Invoke(_lastLeftPoint, _lastRightPoint, left, right);
         _lastLeftPoint = left;
         _lastRightPoint = right;
     }
