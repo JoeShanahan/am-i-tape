@@ -8,6 +8,7 @@ public class TapeData : ScriptableObject
     [TextArea]
     public string Description;
     public GameObject Prefab;
+    public GameObject PrefabMultiplayer;
     public Texture2D Texture;
     public bool IsLocked;
 

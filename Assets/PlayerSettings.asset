@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b446fc1f6b155d444ba6f12afbb161e9, type: 3}
   m_Name: PlayerSettings
   m_EditorClassIdentifier: Assembly-CSharp::PlayerSettings
-  SelectedMode: 1
+  SelectedMode: 0
   RemoteIP: 
   RemotePort: 0
   MultiplayerName: 
