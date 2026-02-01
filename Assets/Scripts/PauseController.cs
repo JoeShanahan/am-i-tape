@@ -38,7 +38,7 @@ public class PauseController : MonoBehaviour
 
         pauseScreen.SetActive(_isPaused);
 
-        Time.timeScale = _isPaused ? 0f : 1f;
+        // Time.timeScale = _isPaused ? 0f : 1f;
     }
     
     public void ButtonPressQuit()

@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b446fc1f6b155d444ba6f12afbb161e9, type: 3}
   m_Name: PlayerSettings
   m_EditorClassIdentifier: Assembly-CSharp::PlayerSettings
-  SelectedMode: 1
-  RemoteIP: 192.168.166.238
+  SelectedMode: 0
+  RemoteIP: 192.168.166.117
   RemotePort: 7777
-  MultiplayerName: Joe
-  SelectedTape: {fileID: 11400000, guid: bcfdbeb64bd4f2f4290f5142566b7751, type: 2}
+  MultiplayerName: Tapey
+  SelectedTape: {fileID: 11400000, guid: d50393c331531ea4d903d2db56162bbe, type: 2}
   InvertX: 0
   InvertY: 0
   AllTapes:
