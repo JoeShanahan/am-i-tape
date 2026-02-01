@@ -20,10 +20,12 @@ public class NetworkStarter : MonoBehaviour
             _netMan.OnClientConnectedCallback += ClientConnected;
             _netMan.OnClientDisconnectCallback += ClientDisconnected;
 
-        var transport = (UnityTransport)_netMan.NetworkConfig.NetworkTransport;
-        transport.ConnectionData.Address = GetLocalIPv4();
-        transport.ConnectionData.Port = 7777;
 
+            var transport = (UnityTransport)_netMan.NetworkConfig.NetworkTransport;
+            transport.ConnectionData.Address = GetLocalIPv4();
+            transport.ConnectionData.Port = 7777;
+
+            Debug.Log($"Starting server on: {transport.ConnectionData.Address}");
 
             _netMan.StartHost();
         }
@@ -32,6 +34,7 @@ public class NetworkStarter : MonoBehaviour
             var transport = (UnityTransport)_netMan.NetworkConfig.NetworkTransport;
             transport.ConnectionData.Address = _settings.RemoteIP;
             transport.ConnectionData.Port = 7777;
+            Debug.Log($"Connecting to: {transport.ConnectionData.Address}");
             _netMan.StartClient();
         }
     }

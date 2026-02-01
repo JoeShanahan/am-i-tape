@@ -22,13 +22,13 @@ public class MultiplayerTitleMenu : MonoBehaviour
     void Start()
     {
         _myIpText.text = $"My IP: {GetLocalIPv4()}";
-        _ipEntry.onSubmit.AddListener(_ => _settings.RemoteIP = _ipEntry.text);
-        _nameEntry.onSubmit.AddListener(_ => _settings.MultiplayerName = _nameEntry.text);
+        _ipEntry.onValueChanged.AddListener(_ => _settings.RemoteIP = _ipEntry.text);
+        _nameEntry.onValueChanged.AddListener(_ => _settings.MultiplayerName = _nameEntry.text);
     }
 
     void OnEnable()
     {
-        _myIpText.text = _settings.RemoteIP;
+        _ipEntry.text = _settings.RemoteIP;
         _nameEntry.text = _settings.MultiplayerName;
     }
 
