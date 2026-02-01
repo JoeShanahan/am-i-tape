@@ -24,9 +24,6 @@ public class TapePlayerInput : MonoBehaviour
     [SerializeField]
     private float _jumpForce;
 
-    [SerializeField]
-    private PlayerSettings _settings;
-
     private bool _jumpRequested;
     private bool _rotateRequested;
     private float _rotateYModifier = 2f;
@@ -142,16 +139,10 @@ public class TapePlayerInput : MonoBehaviour
         forwardAxis.Normalize();
         sideAxis.Normalize();
 
-        if (_settings.InvertX)
-            move.x = -move.x;
-
-        if (_settings.InvertY)
-            move.y = -move.y;
-
         // Combine torques
         Vector3 torque =
             forwardAxis * (_rollStrength * move.y) +
-            sideAxis   * (_tiltStrength * move.x);
+            sideAxis   * (_tiltStrength * -move.x);
 
         _rb.AddTorque(torque, ForceMode.Acceleration);
     }

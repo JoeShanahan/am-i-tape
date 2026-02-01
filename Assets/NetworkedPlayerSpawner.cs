@@ -42,12 +42,9 @@ public class NetworkedPlayerSpawner : NetworkBehaviour
             Debug.LogError($"No idea what tape '{tapeId}' is???");
             return;
         }
-        Debug.Log("Instantiating a new object");
-        GameObject go = Instantiate(d.Prefab);
-        var netObj = go.GetComponent<NetworkObject>();
-        Debug.Log("Spawning with ownership");
-        netObj.SpawnWithOwnership(ownerClientId);
 
-        Debug.Log($"Spawned player object for client {ownerClientId}");
+        GameObject go = Instantiate(d.PrefabMultiplayer);
+        var netObj = go.GetComponent<NetworkObject>();
+        netObj.SpawnWithOwnership(ownerClientId);
     }
 }
