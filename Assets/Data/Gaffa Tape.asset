@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70da24d82e8254bdc96273588685a423, type: 3}
-  m_Name: Black Tape
+  m_Name: Gaffa Tape
   m_EditorClassIdentifier: Assembly-CSharp::TapeData
   TapeName: Gaffer Tape
   PreviewSprite: {fileID: 21300000, guid: c387aa65e572a7848a4c637c8810d1af, type: 3}

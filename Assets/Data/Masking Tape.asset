@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70da24d82e8254bdc96273588685a423, type: 3}
-  m_Name: Blue Tape
+  m_Name: Masking Tape
   m_EditorClassIdentifier: Assembly-CSharp::TapeData
   TapeName: Painting Tape
   PreviewSprite: {fileID: 21300000, guid: cf9bbc9cc12ea9a42bad93cd95d6d246, type: 3}

@@ -8,7 +8,7 @@ public class TapePlayerInput : MonoBehaviour
     private Transform _forwardTransform;
 
     private InputSystem_Actions _input;
-    
+
     [SerializeField]
     private Rigidbody _rb;
 
@@ -28,6 +28,8 @@ public class TapePlayerInput : MonoBehaviour
     private bool _rotateRequested;
     private float _rotateYModifier = 2f;
     private float _rotateXModifier = 0.8f;
+    private bool _isGrounded = false;
+    private int _groundedContactPoints = 0;
 
     void Start()
     {
@@ -39,7 +41,7 @@ public class TapePlayerInput : MonoBehaviour
         _input.Player.Rotate.canceled += RotatePressed;
     }
 
-     private void OnDestroy()
+    private void OnDestroy()
     {
         if (_input != null)
         {
@@ -50,7 +52,7 @@ public class TapePlayerInput : MonoBehaviour
             _input.Disable();
         }
     }
-    
+
     private bool _isLocalPlayer;
 
     public void Init(Transform forward, bool isLocalPlayer)
@@ -97,6 +99,7 @@ public class TapePlayerInput : MonoBehaviour
         if (!_isLocalPlayer)
             return;
 
+
         Vector3 angular = _rb.angularVelocity;
         angular.x = Mathf.Clamp(angular.x, -_maxAngular, _maxAngular);
         angular.y = Mathf.Clamp(angular.y, -_maxAngular, _maxAngular);
@@ -104,18 +107,22 @@ public class TapePlayerInput : MonoBehaviour
 
         var move = _input.Player.Move.ReadValue<Vector2>();
 
-    
+
         // Forward roll axis
         Vector3 forwardAxis = Vector3.Cross(-_forwardTransform.forward, Vector3.up);
 
         // Side roll axis (left/right)
         Vector3 sideAxis = Vector3.Cross(_forwardTransform.right, Vector3.up);
 
-        
-        if (_jumpRequested)
+        Debug.Log(_groundedContactPoints);
+        _isGrounded = _groundedContactPoints > 0;
+
+        if (_jumpRequested && _isGrounded)
         {
+            _groundedContactPoints = 0;
             _jumpRequested = false;
             _rb.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
+            _isGrounded = false;
         }
 
         if (_rotateRequested)
@@ -139,15 +146,23 @@ public class TapePlayerInput : MonoBehaviour
         // Combine torques
         Vector3 torque =
             forwardAxis * (_rollStrength * move.y) +
-            sideAxis   * (_tiltStrength * -move.x);
+            sideAxis * (_tiltStrength * -move.x);
 
         _rb.AddTorque(torque, ForceMode.Acceleration);
+
     }
 
-    void OnCollisionEnter(Collision other)
+    void OnCollisionEnter(Collision hit)
     {
-        if (other.gameObject.CompareTag("Bounce"))
-            _jumpRequested = true;        
+        if (hit.gameObject.CompareTag("Bounce"))
+            _jumpRequested = true;
+    }
+
+    void OnCollisionStay(Collision hit)
+    {
+        if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Ground"))
+            _groundedContactPoints = hit.contactCount;
+        else _groundedContactPoints = 0;
     }
 
 }
