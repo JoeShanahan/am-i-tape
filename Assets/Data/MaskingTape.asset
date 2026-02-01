@@ -17,6 +17,7 @@ MonoBehaviour:
   Description: The loudest tape in existence. Great for sealing boxes, annoying your
     neighbours, and creating packages that absolutely will not open unless someone
     uses a chainsaw.
-  Prefab: {fileID: 0}
+  Prefab: {fileID: 8963276398143882740, guid: 7712e96660843461eae6502945f63a47, type: 3}
+  PrefabMultiplayer: {fileID: 8963276398143882740, guid: 7712e96660843461eae6502945f63a47, type: 3}
   Texture: {fileID: 0}
   IsLocked: 0
