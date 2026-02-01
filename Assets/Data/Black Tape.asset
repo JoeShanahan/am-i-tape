@@ -17,5 +17,6 @@ MonoBehaviour:
   Description: "Built like a tank and twice as stubborn. If you stick something with
     Tough Tape, it\u2019s staying there until the end of time. Maybe longer."
   Prefab: {fileID: 3042152603781404721, guid: d3fb38e4b772cdf46b657ca6484b6b16, type: 3}
+  PrefabMultiplayer: {fileID: 6663702228895903738, guid: 32a9ca94d11327d409182e77e3882293, type: 3}
   Texture: {fileID: 0}
   IsLocked: 0

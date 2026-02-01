@@ -15,6 +15,9 @@ public class CameraFollow : MonoBehaviour
     private Vector2 _cameraBounds;
 
     private InputSystem_Actions _input;
+    
+    [SerializeField]
+    private PlayerSettings _settings;
 
     public void Init(Transform toFollow)
     {
@@ -36,8 +39,15 @@ public class CameraFollow : MonoBehaviour
     void Update()
     {
         var look = _input.Player.Look.ReadValue<Vector2>();
+
+        if (_settings.InvertX)
+            look.x = -look.x;
+        if (_settings.InvertY)
+            look.y = -look.y;
+    
+
         transform.Rotate(0, _cameraSensitivity * look.x, 0);
-        _verticalTilt.Rotate(_cameraSensitivity * look.y, 0, 0);
+        _verticalTilt.Rotate(_cameraSensitivity * -look.y, 0, 0);
 
         Vector3 eulerAngles = _verticalTilt.localEulerAngles;
 
@@ -45,6 +55,8 @@ public class CameraFollow : MonoBehaviour
         {
             eulerAngles.x -= 360;
         }
+
+        
 
         eulerAngles.x = Mathf.Clamp(eulerAngles.x, _cameraBounds.x, _cameraBounds.y);
         _verticalTilt.localEulerAngles = eulerAngles;

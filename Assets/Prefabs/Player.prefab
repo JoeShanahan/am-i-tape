@@ -214,6 +214,7 @@ MonoBehaviour:
   _verticalTilt: {fileID: 1945939436682518806}
   _cameraSensitivity: 2
   _cameraBounds: {x: -10, y: 50}
+  _settings: {fileID: 11400000, guid: a06b81ec31abc944c85553bde6e4cdfb, type: 2}
 --- !u!1 &8024104777724386928
 GameObject:
   m_ObjectHideFlags: 0
