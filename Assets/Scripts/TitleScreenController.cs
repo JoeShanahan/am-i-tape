@@ -1,8 +1,11 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class TitleScreenController : MonoBehaviour
 {
+    private GameObject _lastSelectedButton;
+
     [SerializeField]
     private CanvasGroup _rootScreen;
 
@@ -14,18 +17,26 @@ public class TitleScreenController : MonoBehaviour
 
     [SerializeField]
     private PlayerSettings _settings;
+    
+    [SerializeField] private GameObject _rootDefaultButton;
+    [SerializeField] private GameObject _singleDefaultButton;
+    [SerializeField] private GameObject _multiDefaultButton;
 
     public void ButtonPressSingle()
     {
         _rootScreen.gameObject.SetActive(false);
         _singlePlayerScreen.gameObject.SetActive(true);
+
+        SelectButton(_lastSelectedButton ?? _singleDefaultButton);
+
         _settings.SelectedMode = PlayerSettings.GameMode.Single;
     }
-
     public void ButtonPressMutli()
     {
         _rootScreen.gameObject.SetActive(false);
         _mutliplayerScreen.gameObject.SetActive(true);
+
+        SelectButton(_lastSelectedButton ?? _multiDefaultButton);
     }
 
     public void ButtonPressBack()
@@ -33,8 +44,10 @@ public class TitleScreenController : MonoBehaviour
         _rootScreen.gameObject.SetActive(true);
         _singlePlayerScreen.gameObject.SetActive(false);
         _mutliplayerScreen.gameObject.SetActive(false);
-    }
 
+        SelectButton(_lastSelectedButton ?? _rootDefaultButton);
+    }
+    
     public void ButtonPressPlaySingle()
     {
         _settings.SelectedMode = PlayerSettings.GameMode.Single;
@@ -63,9 +76,21 @@ public class TitleScreenController : MonoBehaviour
         
     }
 
-    // Update is called once per frame
+    private void SelectButton(GameObject button)
+    {
+        _lastSelectedButton = button;
+        // EventSystem.current.SetSelectedGameObject(null);
+        // EventSystem.current.SetSelectedGameObject(button);
+    }
+
     void Update()
     {
-        
+        var selected = EventSystem.current.currentSelectedGameObject;
+        if (selected)
+        {
+            _lastSelectedButton = selected;
+        }
     }
+
+
 }
