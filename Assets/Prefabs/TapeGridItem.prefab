@@ -88,6 +88,8 @@ GameObject:
   - component: {fileID: 1826552035787032523}
   - component: {fileID: 3610636801786387736}
   - component: {fileID: 8446667632042073560}
+  - component: {fileID: 5151873981910504051}
+  - component: {fileID: 4469195088862301197}
   m_Layer: 5
   m_Name: TapeGridItem
   m_TagString: Untagged
@@ -138,7 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.76862746, g: 0.76862746, b: 0.76862746, a: 0.6039216}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.47058824}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -172,6 +174,8 @@ MonoBehaviour:
   descriptiontext: {fileID: 0}
   LockedObject: {fileID: 2499553805936349621}
   tapedata: {fileID: 0}
+  settings: {fileID: 11400000, guid: a06b81ec31abc944c85553bde6e4cdfb, type: 2}
+  HighlightImage: {fileID: 1826552035787032523}
 --- !u!114 &8446667632042073560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,7 +222,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3610636801786387736}
         m_TargetAssemblyTypeName: TapeItemUI, Assembly-CSharp
-        m_MethodName: onSelected
+        m_MethodName: ButtonPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -228,6 +232,41 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &5151873981910504051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5759289699640902696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.LayoutElement
+  m_IgnoreLayout: 0
+  m_MinWidth: -1
+  m_MinHeight: -1
+  m_PreferredWidth: 180
+  m_PreferredHeight: 220
+  m_FlexibleWidth: -1
+  m_FlexibleHeight: -1
+  m_LayoutPriority: 1
+--- !u!114 &4469195088862301197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5759289699640902696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c654f5fab1e6149548ee5a5e4c741188, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScaleIfSelected
+  selectedScale: 1
+  normalScale: 0.8
+  speed: 10
 --- !u!1 &6907652750977403323
 GameObject:
   m_ObjectHideFlags: 0

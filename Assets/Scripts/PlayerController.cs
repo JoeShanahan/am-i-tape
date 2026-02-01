@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]
-    private TapeData _selectedTape;
+    private PlayerSettings _settings;
 
     [SerializeField]
     private CameraFollow _cameraFollow;
@@ -21,15 +21,16 @@ public class PlayerController : MonoBehaviour
         bool isLocalPlayer = true;
 
         _virtualCam.gameObject.SetActive(isLocalPlayer);
-        _spawnedTape = Instantiate(_selectedTape.Prefab);
+        _spawnedTape = Instantiate(_settings.SelectedTape.Prefab);
         _spawnedTape.GetComponent<TapePlayerInput>().Init(_cameraFollow.transform, isLocalPlayer);
         _cameraFollow.Init(_spawnedTape.transform);
         FindFirstObjectByType<PlayerDebugUI>()?.Init(_spawnedTape);
 
-        Vector3 respawnPos = GameObject.FindWithTag("Respawn").transform.position;
+        GameObject respawnPos = GameObject.FindWithTag("Respawn");
         Rigidbody _rb = _spawnedTape.GetComponent<Rigidbody>();
-        if (_rb != null)
-        _rb.position = respawnPos;
+
+        if (_rb != null && respawnPos != null)
+            _rb.position = respawnPos.transform.position;
     }
 
     // Update is called once per frame

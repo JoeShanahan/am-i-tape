@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d09e74fb01b86b444845ac873c1580af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  _selectedTape: {fileID: 11400000, guid: bcfdbeb64bd4f2f4290f5142566b7751, type: 2}
+  _settings: {fileID: 11400000, guid: a06b81ec31abc944c85553bde6e4cdfb, type: 2}
   _cameraFollow: {fileID: 1982885159659283191}
   _virtualCam: {fileID: 7626926461658797397}
 --- !u!1 &7361386939661420763

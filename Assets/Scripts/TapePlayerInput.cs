@@ -29,7 +29,7 @@ public class TapePlayerInput : MonoBehaviour
     private float _rotateYModifier = 2f;
     private float _rotateXModifier = 0.8f;
     private bool _isGrounded = false;
-    private int _groundedContactPoints = 0;
+    // private int _groundedContactPoints = 0;
 
     void Start()
     {
@@ -114,12 +114,12 @@ public class TapePlayerInput : MonoBehaviour
         // Side roll axis (left/right)
         Vector3 sideAxis = Vector3.Cross(_forwardTransform.right, Vector3.up);
 
-        Debug.Log(_groundedContactPoints);
-        _isGrounded = _groundedContactPoints > 0;
+        // Debug.Log(_groundedContactPoints);
+        // _isGrounded = _groundedContactPoints > 0;
 
-        if (_jumpRequested && _isGrounded)
+        if (_jumpRequested) // && _isGrounded)
         {
-            _groundedContactPoints = 0;
+            // _groundedContactPoints = 0;
             _jumpRequested = false;
             _rb.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
             _isGrounded = false;
@@ -160,9 +160,9 @@ public class TapePlayerInput : MonoBehaviour
 
     void OnCollisionStay(Collision hit)
     {
-        if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Ground"))
-            _groundedContactPoints = hit.contactCount;
-        else _groundedContactPoints = 0;
+        // if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        //     _groundedContactPoints = hit.contactCount;
+        // else _groundedContactPoints = 0;
     }
 
 }
