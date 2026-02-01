@@ -8,6 +8,8 @@ public class TapePlacerNetwork : NetworkBehaviour
     private TapePlacer _placer;
     [SerializeField]
     private Material _tapeMat;
+    [SerializeField] private PlayerSettings _playerSettings;
+    [SerializeField] private TapeData _tapeData;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -16,39 +18,47 @@ public class TapePlacerNetwork : NetworkBehaviour
         _placer.OnQuadPlaced += OnQuadPlaced;
     }
 
-private void OnQuadPlaced(Vector3 a, Vector3 b, Vector3 c, Vector3 d)
-{
-    // Tell server to relay to others
-    RelayQuadPlacedServerRpc(a, b, c, d);
-}
-
-[ServerRpc(InvokePermission = RpcInvokePermission.Everyone)]
-private void RelayQuadPlacedServerRpc(Vector3 a, Vector3 b, Vector3 c, Vector3 d, ServerRpcParams serverRpcParams = default)
-{
-    ulong sender = serverRpcParams.Receive.SenderClientId;
-
-    var targets = NetworkManager.Singleton.ConnectedClientsIds
-        .Where(id => id != sender)
-        .ToArray();
-
-    var rpcParams = new ClientRpcParams
+    private void OnQuadPlaced(Vector3 a, Vector3 b, Vector3 c, Vector3 d)
     {
-        Send = new ClientRpcSendParams { TargetClientIds = targets }
-    };
+        // Tell server to relay to others
+        RelayQuadPlacedServerRpc(a, b, c, d, _tapeData.name);
+    }
 
-    SpawnLocalObjectClientRpc(a, b, c, d, rpcParams);
-}
+    [ServerRpc(InvokePermission = RpcInvokePermission.Everyone)]
+    private void RelayQuadPlacedServerRpc(Vector3 a, Vector3 b, Vector3 c, Vector3 d, string tapeString, ServerRpcParams serverRpcParams = default)
+    {
+        ulong sender = serverRpcParams.Receive.SenderClientId;
 
-[ClientRpc]
-private void SpawnLocalObjectClientRpc(Vector3 a, Vector3 b, Vector3 c, Vector3 d, ClientRpcParams rpcParams = default)
-{
+        var targets = NetworkManager.Singleton.ConnectedClientsIds
+            .Where(id => id != sender)
+            .ToArray();
+
+        var rpcParams = new ClientRpcParams
+        {
+            Send = new ClientRpcSendParams { TargetClientIds = targets }
+        };
+        
+        foreach (TapeData tape in _playerSettings.AllTapes)
+        {
+            if (tape.name == tapeString)
+            {
+                _tapeMat = tape.material;
+                break;
+            }
+        }
+        SpawnLocalObjectClientRpc(a, b, c, d, tapeString, rpcParams);
+    }
+
+    [ClientRpc]
+    private void SpawnLocalObjectClientRpc(Vector3 a, Vector3 b, Vector3 c, Vector3 d, string tapeString, ClientRpcParams rpcParams = default)
+    {
         Debug.LogWarning($"Executing RPC {a}");
 
-    GenerateGeometry(a, b, c, d);
-}
+        GenerateGeometry(a, b, c, d);
+    }
     private int _tapeCount;
 
-        private void GenerateGeometry(Vector3 l1, Vector3 r1, Vector3 l2, Vector3 r2)
+    private void GenerateGeometry(Vector3 l1, Vector3 r1, Vector3 l2, Vector3 r2)
     {
         Mesh box = GenerateThickQuad(l1, r1, l2, r2);
         box.name = $"GeneratedMesh{_tapeCount}";
@@ -59,10 +69,10 @@ private void SpawnLocalObjectClientRpc(Vector3 a, Vector3 b, Vector3 c, Vector3 
         collider.sharedMesh = box;
         collider.convex = true;
         newObj.gameObject.name = $"RemoteTapeMesh{_tapeCount}";
-        _tapeCount ++;
+        _tapeCount++;
     }
 
-    
+
     private (Vector3[], int[]) GetVerts(Vector3 l1, Vector3 r1, Vector3 l2, Vector3 r2, float thickness = 0.02f)
     {
         Vector3 offset = Vector3.up * thickness;
