@@ -1,3 +1,4 @@
+using Unity.Collections;
 using Unity.Netcode;
 using UnityEngine;
 
@@ -5,6 +6,12 @@ public class NetworkTapeBehaviour : NetworkBehaviour
 {
     [SerializeField]
     private GameObject _extras;
+
+    [SerializeField]
+    private GameObject _nameTagPrefab;
+
+    public NetworkVariable<FixedString64Bytes> PlayerId = new();
+
 
     public override void OnNetworkSpawn()
     {
@@ -19,6 +26,7 @@ public class NetworkTapeBehaviour : NetworkBehaviour
         else
         {
             GetComponent<TapePlayerInput>().Init(null, false);
+            W2C.InstantiateAs<PlayerNameTag>(_nameTagPrefab).Init(transform, PlayerId.Value.ToString());
             
         }   
     }

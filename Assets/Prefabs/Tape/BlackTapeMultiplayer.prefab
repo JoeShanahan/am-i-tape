@@ -179,6 +179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NetworkTapeBehaviour
   ShowTopMostFoldoutHeaderGroup: 1
   _extras: {fileID: 5008162569323002319, guid: 12f27902a7ddb6e44afa261811e443d5, type: 3}
+  _nameTagPrefab: {fileID: 7135080995122977479, guid: 7d1bb83b924b0b6488dfe1b10e880290, type: 3}
 --- !u!114 &8393180449658825314
 MonoBehaviour:
   m_ObjectHideFlags: 0

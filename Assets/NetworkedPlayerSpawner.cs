@@ -45,6 +45,8 @@ public class NetworkedPlayerSpawner : NetworkBehaviour
 
         GameObject go = Instantiate(d.PrefabMultiplayer);
         var netObj = go.GetComponent<NetworkObject>();
-        netObj.SpawnWithOwnership(ownerClientId);
+
+        go.GetComponent<NetworkTapeBehaviour>().PlayerId.Value = playerId;
+                netObj.SpawnWithOwnership(ownerClientId);
     }
 }

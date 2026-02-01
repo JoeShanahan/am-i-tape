@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
-  GlobalObjectIdHash: 1374745598
+  GlobalObjectIdHash: 3457691981
   InScenePlacedSourceGlobalObjectIdHash: 0
   DeferredDespawnTick: 0
   Ownership: 1
@@ -191,6 +191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NetworkTapeBehaviour
   ShowTopMostFoldoutHeaderGroup: 1
   _extras: {fileID: 5008162569323002319, guid: 12f27902a7ddb6e44afa261811e443d5, type: 3}
+  _nameTagPrefab: {fileID: 7135080995122977479, guid: 7d1bb83b924b0b6488dfe1b10e880290, type: 3}
 --- !u!114 &6601829563926055928
 MonoBehaviour:
   m_ObjectHideFlags: 0
