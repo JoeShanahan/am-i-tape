@@ -4,8 +4,6 @@ using UnityEngine.EventSystems;
 
 public class TitleScreenController : MonoBehaviour
 {
-    private GameObject _lastSelectedButton;
-
     [SerializeField]
     private CanvasGroup _rootScreen;
 
@@ -63,13 +61,13 @@ public class TitleScreenController : MonoBehaviour
     public void ButtonPressPlaySingle()
     {
         _settings.SelectedMode = PlayerSettings.GameMode.Single;
-        PersistentUI.DoTransition("JoeScene");
+        PersistentUI.DoTransition("FINAL_SingleplayerScene");
     }
 
     public void ButtonPressPlayMultiHost()
     {
         _settings.SelectedMode = PlayerSettings.GameMode.MultiHost;
-        PersistentUI.DoTransition("MultiScene");
+        PersistentUI.DoTransition("FINAL_MultiplayerScene");
     }
 
     public void ButtonPressPlayMultiClient()
@@ -87,20 +85,4 @@ public class TitleScreenController : MonoBehaviour
     {
         
     }
-
-    private void SelectButton(GameObject button)
-    {
-        _lastSelectedButton = button;
-    }
-
-    void Update()
-    {
-        var selected = EventSystem.current.currentSelectedGameObject;
-        if (selected)
-        {
-            _lastSelectedButton = selected;
-        }
-    }
-
-
 }
