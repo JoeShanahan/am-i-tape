@@ -66,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bca2a8820a8e7a3438e5d64deded1383, type: 2}
+  - {fileID: 2100000, guid: f87540a08c039409489c15280917c34d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -100,18 +100,12 @@ GameObject:
   m_Component:
   - component: {fileID: 149779373130274383}
   - component: {fileID: 8957857844235311133}
-  - component: {fileID: 62245087212188649}
-  - component: {fileID: 4702630556658742998}
-  - component: {fileID: 3900899098036006617}
-  - component: {fileID: 776302116711158049}
-  - component: {fileID: 2362530048849752937}
-  - component: {fileID: 5284284693082089020}
-  - component: {fileID: 1940904162708787366}
-  - component: {fileID: 4744448115384797250}
-  - component: {fileID: 2095980067842885984}
-  - component: {fileID: 9161999623513801241}
+  - component: {fileID: 1839769148917883759}
+  - component: {fileID: 8185796639885741229}
+  - component: {fileID: 6689880258630413986}
+  - component: {fileID: 6058734198391535254}
   m_Layer: 6
-  m_Name: BlueTape
+  m_Name: NotTape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -125,7 +119,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4499961483379681810}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.3133409, y: -0, z: -0, w: 0.9496407}
   m_LocalPosition: {x: -3.22, y: 1.13, z: 2.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -133,7 +127,7 @@ Transform:
   - {fileID: 3780225410213142159}
   - {fileID: 7021281408771795350}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 36.521, y: 0, z: 0}
 --- !u!54 &8957857844235311133
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -161,97 +155,28 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!114 &62245087212188649
-MonoBehaviour:
+--- !u!135 &1839769148917883759
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4499961483379681810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1a61b70ab1f82a43a41ff014b67f3bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  _numColliders: 24
-  _radius: 0.9
-  _capsuleRadius: 0.15
-  _capsuleLength: 1
-  _mat: {fileID: 13400000, guid: ef1085d986169604fbb951975ac03aab, type: 2}
---- !u!114 &4702630556658742998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4499961483379681810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e36fc6ac4d7212640b8548dd6484ecb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TapePlayerInput
-  _rb: {fileID: 8957857844235311133}
-  _rollStrength: 20
-  _tiltStrength: 6
-  _maxAngular: 10
-  _jumpForce: 20
-  _settings: {fileID: 11400000, guid: a06b81ec31abc944c85553bde6e4cdfb, type: 2}
---- !u!114 &3900899098036006617
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4499961483379681810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e4ae4c072b3eba4cb850a89f1effdaa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  _zKill: -10
---- !u!114 &776302116711158049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4499961483379681810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d316b30f94d0e34d88c008878d05358, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
---- !u!114 &2362530048849752937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4499961483379681810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 618702a3f77706645a4aaedeef87039e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  _minUpright: 0.75
-  _mask:
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 55
-  _maxPointDistance: 0.4
---- !u!114 &5284284693082089020
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4499961483379681810}
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b7cc3c56b0bed64d928bbbf4de02f8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  _tapeMat: {fileID: 2100000, guid: bca2a8820a8e7a3438e5d64deded1383, type: 2}
---- !u!114 &1940904162708787366
+  serializedVersion: 3
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8185796639885741229
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -263,7 +188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
-  GlobalObjectIdHash: 1513327905
+  GlobalObjectIdHash: 2892566766
   InScenePlacedSourceGlobalObjectIdHash: 0
   DeferredDespawnTick: 0
   Ownership: 1
@@ -276,7 +201,7 @@ MonoBehaviour:
   AutoObjectParentSync: 1
   SyncOwnerTransformWhenParented: 1
   AllowOwnerToParent: 0
---- !u!114 &4744448115384797250
+--- !u!114 &6689880258630413986
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -300,7 +225,7 @@ MonoBehaviour:
   RotationMaxInterpolationTime: 0.1
   ScaleLerpSmoothing: 1
   ScaleMaxInterpolationTime: 0.1
-  AuthorityMode: 0
+  AuthorityMode: 1
   TickSyncChildren: 0
   UseUnreliableDeltas: 0
   SyncPositionX: 1
@@ -322,7 +247,7 @@ MonoBehaviour:
   SwitchTransformSpaceWhenParented: 0
   Interpolate: 1
   SlerpPosition: 0
---- !u!114 &2095980067842885984
+--- !u!114 &6058734198391535254
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -339,20 +264,6 @@ MonoBehaviour:
   UseRigidBodyForMotion: 0
   AutoUpdateKinematicState: 1
   AutoSetKinematicOnDespawn: 1
---- !u!114 &9161999623513801241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4499961483379681810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46d42e68572d0554f9c88fb705844d95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NetworkTapeBehaviour
-  ShowTopMostFoldoutHeaderGroup: 1
-  _extras: {fileID: 5008162569323002319, guid: 12f27902a7ddb6e44afa261811e443d5, type: 3}
 --- !u!1 &5463263456496733021
 GameObject:
   m_ObjectHideFlags: 0

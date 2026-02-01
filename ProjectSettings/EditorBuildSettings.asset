@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/TitleScene.unity
+    path: Assets/Scenes/TitleScene.unity
     guid: 608c0ea75f70b7149bf20de57c313a88
   - enabled: 1
     path: Assets/Scenes/NetworkScene.unity
@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/JoeScene.unity
     guid: 134a2af254fe2554a9b885cf9a294ee1
+  - enabled: 1
+    path: Assets/Scenes/MultiScene.unity
+    guid: 9d4347269f752c5429501a84e31cb2e1
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

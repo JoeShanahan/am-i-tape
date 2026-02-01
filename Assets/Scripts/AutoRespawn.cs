@@ -24,9 +24,10 @@ public class AutoRespawn : MonoBehaviour
             transform.position = _startPos;
             transform.rotation = _startRot;
 
-            if (TryGetComponent<Rigidbody>(out Rigidbody rb))
+            if (TryGetComponent(out Rigidbody rb))
             {
-                
+                rb.MovePosition(_startPos);
+                rb.MoveRotation(_startRot);
             }
         }
     }

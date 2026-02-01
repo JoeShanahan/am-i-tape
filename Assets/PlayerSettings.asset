@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b446fc1f6b155d444ba6f12afbb161e9, type: 3}
+  m_Name: PlayerSettings
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerSettings
+  SelectedMode: 1
+  RemoteIP: 
+  RemotePort: 0
+  MultiplayerName: 
+  SelectedTape: {fileID: 11400000, guid: bcfdbeb64bd4f2f4290f5142566b7751, type: 2}
+  InvertX: 0
+  InvertY: 0
+  AllTapes:
+  - {fileID: 11400000, guid: d50393c331531ea4d903d2db56162bbe, type: 2}
+  - {fileID: 11400000, guid: bcfdbeb64bd4f2f4290f5142566b7751, type: 2}
