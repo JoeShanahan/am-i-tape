@@ -28,7 +28,7 @@ public class TapePlayerInput : MonoBehaviour
     private bool _rotateRequested;
     private float _rotateYModifier = 2f;
     private float _rotateXModifier = 0.8f;
-    private bool _isGrounded = false;
+    //private bool _isGrounded = false;
     // private int _groundedContactPoints = 0;
 
     void Start()
@@ -122,7 +122,7 @@ public class TapePlayerInput : MonoBehaviour
             // _groundedContactPoints = 0;
             _jumpRequested = false;
             _rb.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
-            _isGrounded = false;
+            //_isGrounded = false;
         }
 
         if (_rotateRequested)

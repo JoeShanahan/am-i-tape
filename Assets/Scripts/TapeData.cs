@@ -9,7 +9,7 @@ public class TapeData : ScriptableObject
     public string Description;
     public GameObject Prefab;
     public GameObject PrefabMultiplayer;
-    public Texture2D Texture;
+    public Material material;
     public bool IsLocked;
 
 }
