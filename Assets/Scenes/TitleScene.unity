@@ -309,7 +309,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 60}
-  m_SizeDelta: {x: 800, y: 450}
+  m_SizeDelta: {x: 1000, y: 316.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &223432597
 MonoBehaviour:
@@ -318,7 +318,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 223432595}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -1225,7 +1225,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Settings
+  m_text: 'Set
+
+    Tings'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4560cccbf9fdc0a43a3575d64658c619, type: 2}
   m_sharedMaterial: {fileID: 1948070464735138912, guid: 4560cccbf9fdc0a43a3575d64658c619, type: 2}
@@ -1252,8 +1254,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 32.7
+  m_fontSizeBase: 32.7
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1769,8 +1771,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 29
+  m_fontSizeBase: 29
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1934,8 +1936,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1080.5614, y: -47.205}
-  m_SizeDelta: {x: 1839.1228, y: 85}
+  m_AnchoredPosition: {x: 528.77954, y: -47.205}
+  m_SizeDelta: {x: 735.5591, y: 85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &741463776
 MonoBehaviour:
@@ -2806,10 +2808,9 @@ GameObject:
   - component: {fileID: 908413918}
   - component: {fileID: 908413922}
   - component: {fileID: 908413921}
-  - component: {fileID: 908413920}
   - component: {fileID: 908413919}
   - component: {fileID: 908413923}
-  - component: {fileID: 908413924}
+  - component: {fileID: 908413925}
   m_Layer: 5
   m_Name: Grid Layout
   m_TagString: Untagged
@@ -2849,34 +2850,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   Prefab: {fileID: 5759289699640902696, guid: aba229f413aa4434b9787538459f91a8, type: 3}
-  AllTapes:
-  - {fileID: 11400000, guid: bcfdbeb64bd4f2f4290f5142566b7751, type: 2}
-  - {fileID: 11400000, guid: d50393c331531ea4d903d2db56162bbe, type: 2}
+  Settings: {fileID: 11400000, guid: a06b81ec31abc944c85553bde6e4cdfb, type: 2}
   DescriptionText: {fileID: 796630610}
---- !u!114 &908413920
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 908413917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GridLayoutGroup
-  m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
-  m_ChildAlignment: 4
-  m_StartCorner: 0
-  m_StartAxis: 0
-  m_CellSize: {x: 180, y: 220}
-  m_Spacing: {x: 10, y: 10}
-  m_Constraint: 0
-  m_ConstraintCount: 2
 --- !u!114 &908413921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2884,7 +2859,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 908413917}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -2930,7 +2905,7 @@ MonoBehaviour:
   selectedScale: 1.2
   normalScale: 1
   speed: 10
---- !u!114 &908413924
+--- !u!114 &908413925
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2939,10 +2914,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 908413917}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86787fa8e1e0841938c192a085dbfe95, type: 3}
+  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TitleScreenMenu
-  _defaultButton: {fileID: 0}
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.HorizontalLayoutGroup
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 4
+  m_Spacing: 16
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1 &928283280
 GameObject:
   m_ObjectHideFlags: 0
@@ -4293,7 +4281,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 2088.6228, y: -47.205}
+  m_AnchoredPosition: {x: 985.0591, y: -47.205}
   m_SizeDelta: {x: 145, y: 85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1286965122
@@ -6739,6 +6727,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2134064851}
   m_CullTransparentMesh: 1
+--- !u!1001 &8722003030192471538
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -1016419993428742674, guid: 2a506e54110674247a5902db584f04e1, type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 3829149070
+      objectReference: {fileID: 0}
+    - target: {fileID: -1016419993428742674, guid: 2a506e54110674247a5902db584f04e1, type: 3}
+      propertyPath: SceneMigrationSynchronization
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1016419993428742674, guid: 2a506e54110674247a5902db584f04e1, type: 3}
+      propertyPath: InScenePlacedSourceGlobalObjectIdHash
+      value: 183725275
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985013973713739746, guid: 2a506e54110674247a5902db584f04e1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 604.5181
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985013973713739746, guid: 2a506e54110674247a5902db584f04e1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985013973713739746, guid: 2a506e54110674247a5902db584f04e1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 372.4792
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985013973713739746, guid: 2a506e54110674247a5902db584f04e1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985013973713739746, guid: 2a506e54110674247a5902db584f04e1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985013973713739746, guid: 2a506e54110674247a5902db584f04e1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985013973713739746, guid: 2a506e54110674247a5902db584f04e1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985013973713739746, guid: 2a506e54110674247a5902db584f04e1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985013973713739746, guid: 2a506e54110674247a5902db584f04e1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985013973713739746, guid: 2a506e54110674247a5902db584f04e1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5247723399419488418, guid: 2a506e54110674247a5902db584f04e1, type: 3}
+      propertyPath: m_Name
+      value: BlackTape
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2a506e54110674247a5902db584f04e1, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -6749,3 +6806,4 @@ SceneRoots:
   - {fileID: 980648625}
   - {fileID: 1505828604}
   - {fileID: 1947912738}
+  - {fileID: 8722003030192471538}

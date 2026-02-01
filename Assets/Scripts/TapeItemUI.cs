@@ -1,6 +1,7 @@
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class TapeItemUI : MonoBehaviour
@@ -11,7 +12,8 @@ public class TapeItemUI : MonoBehaviour
     public TMP_Text descriptiontext;
     public Transform LockedObject;
     public TapeData tapedata;
-
+    public PlayerSettings settings;
+    public Image HighlightImage;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,7 +24,12 @@ public class TapeItemUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        HighlightImage.enabled = tapedata == settings.SelectedTape;
 
+        if (EventSystem.current.currentSelectedGameObject == gameObject)
+        {
+            descriptiontext.text = tapedata.Description;        
+        }
     }
 
     public void SetTapeData(TapeData data, TMP_Text DT) // add parameter for "description text"
@@ -41,10 +48,14 @@ public class TapeItemUI : MonoBehaviour
         }
     }
 
+    public void ButtonPressed()
+    {
+        settings.SelectedTape = tapedata;
+    }
+
     public void onSelected()
     {
         // set description text.text as Description
-        descriptiontext.text = tapedata.Description;
     }
 }
    
