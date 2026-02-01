@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70da24d82e8254bdc96273588685a423, type: 3}
-  m_Name: MaskingTape
+  m_Name: Packing Tape
   m_EditorClassIdentifier: Assembly-CSharp::TapeData
   TapeName: Packing Tape
   PreviewSprite: {fileID: 21300000, guid: 1a681456d74c243729d043ec02af4fe0, type: 3}
   Description: The loudest tape in existence. Great for sealing boxes, annoying your
     neighbours, and creating packages that absolutely will not open unless someone
     uses a chainsaw.
-  Prefab: {fileID: 8963276398143882740, guid: 7712e96660843461eae6502945f63a47, type: 3}
-  PrefabMultiplayer: {fileID: 8963276398143882740, guid: 7712e96660843461eae6502945f63a47, type: 3}
+  Prefab: {fileID: 919132149155446097, guid: bd7ac0803c3624c7db4f3111ef21e683, type: 3}
+  PrefabMultiplayer: {fileID: 919132149155446097, guid: bd7ac0803c3624c7db4f3111ef21e683, type: 3}
   Texture: {fileID: 0}
   IsLocked: 0
