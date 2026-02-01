@@ -37,7 +37,15 @@ public class TapePlacerNetwork : NetworkBehaviour
         {
             Send = new ClientRpcSendParams { TargetClientIds = targets }
         };
-        
+
+        SpawnLocalObjectClientRpc(a, b, c, d, tapeString, rpcParams);
+    }
+
+    [ClientRpc]
+    private void SpawnLocalObjectClientRpc(Vector3 a, Vector3 b, Vector3 c, Vector3 d, string tapeString, ClientRpcParams rpcParams = default)
+    {
+        Debug.LogWarning($"Executing RPC {a}");
+
         foreach (TapeData tape in _playerSettings.AllTapes)
         {
             if (tape.name == tapeString)
@@ -46,13 +54,6 @@ public class TapePlacerNetwork : NetworkBehaviour
                 break;
             }
         }
-        SpawnLocalObjectClientRpc(a, b, c, d, tapeString, rpcParams);
-    }
-
-    [ClientRpc]
-    private void SpawnLocalObjectClientRpc(Vector3 a, Vector3 b, Vector3 c, Vector3 d, string tapeString, ClientRpcParams rpcParams = default)
-    {
-        Debug.LogWarning($"Executing RPC {a}");
 
         GenerateGeometry(a, b, c, d);
     }

@@ -19,16 +19,15 @@ public class AutoRespawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        GameObject respawnPos = GameObject.FindWithTag("Respawn");
+        Rigidbody _rb = GetComponent<Rigidbody>();
+
+
         if (transform.position.y < _zKill)
         {
-            transform.position = _startPos;
-            transform.rotation = _startRot;
 
-            if (TryGetComponent(out Rigidbody rb))
-            {
-                rb.MovePosition(_startPos);
-                rb.MoveRotation(_startRot);
-            }
+        if (_rb != null && respawnPos != null)
+            _rb.position = respawnPos.transform.position;
         }
     }
 }
