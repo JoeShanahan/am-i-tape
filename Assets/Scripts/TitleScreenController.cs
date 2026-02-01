@@ -73,7 +73,7 @@ public class TitleScreenController : MonoBehaviour
     public void ButtonPressPlayMultiClient()
     {
         _settings.SelectedMode = PlayerSettings.GameMode.MultiClient;
-        PersistentUI.DoTransition("MultiScene");
+        PersistentUI.DoTransition("FINAL_MultiplayerScene");
     }
 
     public void ButtonPressQuit()

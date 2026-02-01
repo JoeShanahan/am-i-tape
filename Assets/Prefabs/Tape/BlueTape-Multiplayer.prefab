@@ -192,6 +192,75 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   _extras: {fileID: 5008162569323002319, guid: 12f27902a7ddb6e44afa261811e443d5, type: 3}
   _nameTagPrefab: {fileID: 7135080995122977479, guid: 7d1bb83b924b0b6488dfe1b10e880290, type: 3}
+  PlayerId:
+    m_InternalValue:
+      utf8LengthInBytes: 0
+      bytes:
+        offset0000:
+          byte0000: 0
+          byte0001: 0
+          byte0002: 0
+          byte0003: 0
+          byte0004: 0
+          byte0005: 0
+          byte0006: 0
+          byte0007: 0
+          byte0008: 0
+          byte0009: 0
+          byte0010: 0
+          byte0011: 0
+          byte0012: 0
+          byte0013: 0
+          byte0014: 0
+          byte0015: 0
+        offset0016:
+          byte0000: 0
+          byte0001: 0
+          byte0002: 0
+          byte0003: 0
+          byte0004: 0
+          byte0005: 0
+          byte0006: 0
+          byte0007: 0
+          byte0008: 0
+          byte0009: 0
+          byte0010: 0
+          byte0011: 0
+          byte0012: 0
+          byte0013: 0
+          byte0014: 0
+          byte0015: 0
+        offset0032:
+          byte0000: 0
+          byte0001: 0
+          byte0002: 0
+          byte0003: 0
+          byte0004: 0
+          byte0005: 0
+          byte0006: 0
+          byte0007: 0
+          byte0008: 0
+          byte0009: 0
+          byte0010: 0
+          byte0011: 0
+          byte0012: 0
+          byte0013: 0
+          byte0014: 0
+          byte0015: 0
+        byte0048: 0
+        byte0049: 0
+        byte0050: 0
+        byte0051: 0
+        byte0052: 0
+        byte0053: 0
+        byte0054: 0
+        byte0055: 0
+        byte0056: 0
+        byte0057: 0
+        byte0058: 0
+        byte0059: 0
+        byte0060: 0
+        byte0061: 0
 --- !u!114 &6601829563926055928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,3 +275,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TapePlacerNetwork
   ShowTopMostFoldoutHeaderGroup: 1
   _tapeMat: {fileID: 2100000, guid: bca2a8820a8e7a3438e5d64deded1383, type: 2}
+  _playerSettings: {fileID: 11400000, guid: a06b81ec31abc944c85553bde6e4cdfb, type: 2}
+  _tapeData: {fileID: 11400000, guid: bcfdbeb64bd4f2f4290f5142566b7751, type: 2}
