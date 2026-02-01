@@ -37,9 +37,6 @@ public class TapePlayerInput : MonoBehaviour
         _input.Player.Jump.canceled += JumpPressed;
         _input.Player.Rotate.performed += RotatePressed;
         _input.Player.Rotate.canceled += RotatePressed;
-
-        // Vector3 respawnPoint = GameObject.FindGameObjectsWithTag("Respawn")[0].transform.position;
-        // _rb.position = respawnPoint;
     }
 
      private void OnDestroy()
@@ -145,6 +142,12 @@ public class TapePlayerInput : MonoBehaviour
             sideAxis   * (_tiltStrength * -move.x);
 
         _rb.AddTorque(torque, ForceMode.Acceleration);
+    }
+
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Bounce"))
+            _jumpRequested = true;        
     }
 
 }
