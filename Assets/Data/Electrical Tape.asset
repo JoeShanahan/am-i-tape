@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Electrical Tape
   m_EditorClassIdentifier: Assembly-CSharp::TapeData
   TapeName: Electrical Tape
-  PreviewSprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  PreviewSprite: {fileID: 21300000, guid: 779f62be0619d4e32b6ba2c32ed5dfe8, type: 3}
   Description: Tape to cover up electricity
   Prefab: {fileID: 919132149155446097, guid: 7e7501e4fa72f405bbac7c897a349f86, type: 3}
   PrefabMultiplayer: {fileID: 919132149155446097, guid: 7e7501e4fa72f405bbac7c897a349f86, type: 3}

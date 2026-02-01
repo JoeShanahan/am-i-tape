@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Masking Tape
   m_EditorClassIdentifier: Assembly-CSharp::TapeData
   TapeName: Masking Tape
-  PreviewSprite: {fileID: 21300000, guid: cf9bbc9cc12ea9a42bad93cd95d6d246, type: 3}
+  PreviewSprite: {fileID: 21300000, guid: 54a777130bbae451e97d05856b2d06ee, type: 3}
   Description: I have a blue house with a blue window, Blue is the color of all that
     I wear
   Prefab: {fileID: 4499961483379681810, guid: eb76858156ed4b942ac175bee8ca3a0e, type: 3}
