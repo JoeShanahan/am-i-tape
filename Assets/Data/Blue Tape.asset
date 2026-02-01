@@ -17,5 +17,6 @@ MonoBehaviour:
   Description: I have a blue house with a blue window, Blue is the color of all that
     I wear
   Prefab: {fileID: 4499961483379681810, guid: eb76858156ed4b942ac175bee8ca3a0e, type: 3}
+  PrefabMultiplayer: {fileID: 6663702228895903738, guid: 32a9ca94d11327d409182e77e3882293, type: 3}
   Texture: {fileID: 0}
   IsLocked: 0

@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
 
     private GameObject _spawnedTape;
 
+    [SerializeField] GameObject respawnPoint;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -24,6 +26,11 @@ public class PlayerController : MonoBehaviour
         _spawnedTape.GetComponent<TapePlayerInput>().Init(_cameraFollow.transform, isLocalPlayer);
         _cameraFollow.Init(_spawnedTape.transform);
         FindFirstObjectByType<PlayerDebugUI>()?.Init(_spawnedTape);
+
+
+        Vector3 respawnPos = respawnPoint.transform.position;
+        Rigidbody _rb = _spawnedTape.GetComponent<Rigidbody>();
+        _rb.position = respawnPos;
     }
 
     // Update is called once per frame
