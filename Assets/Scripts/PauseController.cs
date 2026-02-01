@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
 
 public class PauseController : MonoBehaviour
 {
@@ -38,5 +39,15 @@ public class PauseController : MonoBehaviour
         pauseScreen.SetActive(_isPaused);
 
         Time.timeScale = _isPaused ? 0f : 1f;
+    }
+    
+    public void ButtonPressQuit()
+    {
+        Application.Quit();
+    }
+    
+    public void ButtonPressMenu()
+    {
+        PersistentUI.DoTransition("TitleScene");
     }
 }

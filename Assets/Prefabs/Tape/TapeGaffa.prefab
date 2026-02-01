@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1371025293395902676}
   - component: {fileID: 8231239586718705702}
   m_Layer: 6
-  m_Name: BlackTape
+  m_Name: TapeGaffa
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38,6 +38,7 @@ Transform:
   m_Children:
   - {fileID: 91784318859316236}
   - {fileID: 1525624914294398072}
+  - {fileID: 7105403391374871515}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1410665221947754712
@@ -80,9 +81,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   _numColliders: 24
-  _radius: 1.2
+  _radius: 1.15
   _capsuleRadius: 0.15
-  _capsuleLength: 2
+  _capsuleLength: 1.4
   _mat: {fileID: 13400000, guid: ef1085d986169604fbb951975ac03aab, type: 2}
 --- !u!114 &424211607296619801
 MonoBehaviour:
@@ -204,7 +205,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3369460391266531763}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -294,7 +295,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5618276249417602455}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -336,3 +337,69 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1001 &7282830497963322416
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2867137922868195185}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 11f435fdf1a424116a3f944d359db3a7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.4231
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 11f435fdf1a424116a3f944d359db3a7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.4231
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 11f435fdf1a424116a3f944d359db3a7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.4231
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 11f435fdf1a424116a3f944d359db3a7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 11f435fdf1a424116a3f944d359db3a7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 11f435fdf1a424116a3f944d359db3a7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 11f435fdf1a424116a3f944d359db3a7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 11f435fdf1a424116a3f944d359db3a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 11f435fdf1a424116a3f944d359db3a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 11f435fdf1a424116a3f944d359db3a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 11f435fdf1a424116a3f944d359db3a7, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 11f435fdf1a424116a3f944d359db3a7, type: 3}
+      propertyPath: m_Name
+      value: Tape_Gaffa
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 11f435fdf1a424116a3f944d359db3a7, type: 3}
+--- !u!4 &7105403391374871515 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 11f435fdf1a424116a3f944d359db3a7, type: 3}
+  m_PrefabInstance: {fileID: 7282830497963322416}
+  m_PrefabAsset: {fileID: 0}
