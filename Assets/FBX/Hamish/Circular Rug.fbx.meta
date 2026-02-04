@@ -3,7 +3,37 @@ guid: a22f17e077e664823b0b92685c833bc7
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rug Dark Red
+    second: {fileID: 2100000, guid: 7899e142959284a5fa3422ce595eddb2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rug Light Red
+    second: {fileID: 2100000, guid: 2efaf8529c41142b690ae3409a728fa4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rug Maroon
+    second: {fileID: 2100000, guid: cedb7209d065d46d792e0c5180255974, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rug Orange
+    second: {fileID: 2100000, guid: d2c847cf4f0dd4256abf70b5c3b34c65, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rug White
+    second: {fileID: 2100000, guid: a83e16df34a0f445d84b294757e71d50, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rug Yellow
+    second: {fileID: 2100000, guid: e719f47052b714b5c92917556336303f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -46,9 +76,9 @@ ModelImporter:
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
-    keepQuads: 0
+    keepQuads: 1
     weldVertices: 1
     bakeAxisConversion: 0
     preserveHierarchy: 0
@@ -91,7 +121,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.002
+    globalScale: 0.2
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

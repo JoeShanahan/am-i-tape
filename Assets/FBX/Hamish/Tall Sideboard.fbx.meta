@@ -3,7 +3,122 @@ guid: 61f32699d9b9d414cb1ff6ebfa895efc
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bar Gold Bottom Rim
+    second: {fileID: 2100000, guid: 32867ccacc7ee49a2817b37123c4003a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blue Book
+    second: {fileID: 2100000, guid: 095d9e0145daa46ed9551fb070d61446, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bottle Label White.001
+    second: {fileID: 2100000, guid: d65ac00cb2b114c02935483c3cecd8da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Box Black Text
+    second: {fileID: 2100000, guid: 2bfb32dd02c964633a1180a09fa296ac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brown Book
+    second: {fileID: 2100000, guid: 1454a7e287ebe48c2bb5147eed17cae8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dark Red Book
+    second: {fileID: 2100000, guid: b9f1cef7d5bb448ada1a3804dca62545, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Green Book 2
+    second: {fileID: 2100000, guid: c2f6a77dad6604363a0acc26a923590f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Leaf.001
+    second: {fileID: 2100000, guid: 6515a7e4c1f9e4401afeae58ff52bc1c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maroon Book
+    second: {fileID: 2100000, guid: c6eaa3cc9bd674c2fad00db6642a7777, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal Handle
+    second: {fileID: 2100000, guid: e8e3e9011d70f474cbfc79f8611c7e8a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal Light
+    second: {fileID: 2100000, guid: dd46a3a0c5eee4b4dbeeb8d3b3235ba5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Red Book
+    second: {fileID: 2100000, guid: 552bcafa180a0441ba7a6c0bb1bd8437, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Seating Booth Table Brown
+    second: {fileID: 2100000, guid: e49bc1be047bb43b4bbfdab00d3d3e48, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SideBoard
+    second: {fileID: 2100000, guid: b0e41cabc0e3a4d69b2f2100dfe7634b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SideBoard Cabinets
+    second: {fileID: 2100000, guid: e39bfe8473e6a48fca51c214ba14ad93, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vase Blue
+    second: {fileID: 2100000, guid: cf53d5c7d038146b499ed8638e22f36f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vase Orange
+    second: {fileID: 2100000, guid: e72bcac28ea5c44e4840fa941c4e7c2d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vase Red
+    second: {fileID: 2100000, guid: c2d6f425823db4832824f506906547ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Whiskey Bottle
+    second: {fileID: 2100000, guid: 91907edaadb2549ccaebba15bcbbd236, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White Darker Label
+    second: {fileID: 2100000, guid: 7162501fd3132497e954733b2c90dee3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wooden Lid
+    second: {fileID: 2100000, guid: aa633e327d8c3424a98e7aefa5027a10, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yellow Leaf
+    second: {fileID: 2100000, guid: 2cd1151158fbb45c3aa6b99567f7e1ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bottle green.001
+    second: {fileID: 2100000, guid: 7abc8d082476b4aca997801d760dfebf, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -46,9 +161,9 @@ ModelImporter:
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
-    keepQuads: 0
+    keepQuads: 1
     weldVertices: 1
     bakeAxisConversion: 0
     preserveHierarchy: 0
@@ -91,7 +206,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.002
+    globalScale: 0.2
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

@@ -3,7 +3,77 @@ guid: 49640b3444e2f455eb84abfd0c72bdaf
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bar Gold Bottom Rim
+    second: {fileID: 2100000, guid: 2e7b80b1504df42a4aeba64229d1763c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bar Main Wood
+    second: {fileID: 2100000, guid: f3bb44f026a024939afafc7b8a5f952b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bottle Label White.001
+    second: {fileID: 2100000, guid: c49907cdeea774169b3b0e6c79bc03f5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Box Black Text
+    second: {fileID: 2100000, guid: 72400205959fb435c8b38ecbbe194869, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Leaf.001
+    second: {fileID: 2100000, guid: a38b73285164a4afe8f0888260724cbc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal Handle
+    second: {fileID: 2100000, guid: 282418deabcd54c8ca1bf157b291a897, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal Light
+    second: {fileID: 2100000, guid: 86f42ff3453cb4a31ae1889b66546e33, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SideBoard
+    second: {fileID: 2100000, guid: 5c657f8b3a116412ab09e477510ebce2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SideBoard Cabinets
+    second: {fileID: 2100000, guid: 92aa1c153fa2f4a4d8cf0f7c49b006f9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vase Orange
+    second: {fileID: 2100000, guid: 5ebec54ae0761479b98a4aec9a402079, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Whiskey Bottle
+    second: {fileID: 2100000, guid: f7ac7600df8f34a678a3469510785909, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White Darker Label
+    second: {fileID: 2100000, guid: 79f2741d2847f45a095d5dfaa741ef98, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wooden Lid
+    second: {fileID: 2100000, guid: 6346f9fddefa947aa8e692159da44677, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bottle green.001
+    second: {fileID: 2100000, guid: f776d86488cc7448a81f44a9ddbe2174, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -46,9 +116,9 @@ ModelImporter:
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
-    keepQuads: 0
+    keepQuads: 1
     weldVertices: 1
     bakeAxisConversion: 0
     preserveHierarchy: 0
@@ -91,7 +161,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.002
+    globalScale: 0.2
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
